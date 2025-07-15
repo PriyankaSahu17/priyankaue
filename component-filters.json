@@ -16,8 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "banner-card",
-      "search"
+      "banner-card"
     ]
   },
   {
@@ -39,6 +38,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "rectangle-cards",
+    "components": [
+      "rectangle-card"
     ]
   }
 ]

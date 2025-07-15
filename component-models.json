@@ -220,32 +220,6 @@
       }
     ]
   },
-      {
-      "id": "search",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "icon",
-          "label": "Icon",
-          "multi": false
-        },
-        {
-          "component": "aem-content",
-          "valueType": "string",
-          "name": "link",
-          "label": "link",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "placeholder",
-          "value": "Search Ideas",
-          "label": "Placeholder",
-          "valueType": "string"
-        }
-      ]
-    },
   {
     "id": "card",
     "fields": [
@@ -310,6 +284,25 @@
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "rectangle-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "richtext",

@@ -1,0 +1,63 @@
+{
+  "definitions": [
+    {
+      "title": "Rectangle-Cards",
+      "id": "rectangle-cards",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Rectangle-Cards",
+              "filter": "rectangle-cards"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Rectangle-Card",
+      "id": "rectangle-card",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Rectangle-Card",
+              "model": "rectangle-card"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "rectangle-card",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "rectangle-cards",
+      "components": [
+        "rectangle-card"
+      ]
+    }
+  ]
+}
