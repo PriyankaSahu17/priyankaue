@@ -312,5 +312,60 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "vertical-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "chips",
+        "value": "",
+        "label": "Chips",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "label": "Is_Paid_Link",
+        "name": "is_paid_link",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Paid Link"
+          },
+          {
+            "name": "No",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Simple Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

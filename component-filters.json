@@ -14,7 +14,6 @@
       "title",
       "hero",
       "cards",
-      "rectangle-cards",
       "columns",
       "fragment",
       "banner-card"
@@ -45,6 +44,12 @@
     "id": "rectangle-cards",
     "components": [
       "rectangle-card"
+    ]
+  },
+  {
+    "id": "vertical-cards",
+    "components": [
+      "vertical-card"
     ]
   }
 ]

@@ -1,82 +1,91 @@
-.cards > ul {
+.rectangle-cards-wrapper {
+  padding: 0 16px;
+}
+
+.rectangle-cards ul {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr; /* Mobile: 1 column */
-  gap: 18px;
+  grid-template-columns: repeat(2, 1fr); /* Mobile-first: 2 cards per row */
+  gap: 16px;
+  max-width: 100%;
 }
 
-/* Tablet: 2 columns */
+/* Tablet */
 @media (min-width: 600px) {
-  .cards > ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop: 3 columns */
-@media (min-width: 900px) {
-  .cards > ul {
+  .rectangle-cards ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.cards > ul > li {
-  background-color: var(--background-color, #fff);
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+/* Desktop: 5 cards per row */
+@media (min-width: 900px) {
+  .rectangle-cards ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
-.cards > ul > li:hover {
+.rectangle-cards ul li {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.rectangle-cards ul li:hover {
   transform: scale(1.02);
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+.rectangle-cards-card-image {
   position: relative;
+  line-height: 0;
 }
 
-.cards > ul > li img {
+.rectangle-cards-card-image img {
   width: 100%;
-  aspect-ratio: 4/3.3;
+  aspect-ratio: 4 / 2;
   object-fit: cover;
   display: block;
+  vertical-align: middle;
 }
 
-.cards .cards-card-body {
+/* FULL OVERLAY BACKGROUND */
+.rectangle-cards-card-body {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 16px;
-  color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), transparent);
-  width: 100%;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-bottom-left-radius: 24px;
-  border-bottom-right-radius: 24px;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* full black film */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
-.cards li.hidden {
+
+.rectangle-cards-card-body p {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Hide cards beyond initial 10 */
+.rectangle-cards li.hidden {
   display: none;
 }
 
-.see-more-btn {
-  margin: 32px auto 0;
-  display: block;
+/* See More Button */
+.rectangle-cards .see-more-btn {
+  margin: 24px auto 0;
   padding: 12px 24px;
-  background-color: #b7adad;
-  color: white;
-  font-size: 1rem;
+  background-color: #e6e6e6;
   border: none;
-  border-radius: 16px;
+  border-radius: 999px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.see-more-btn:hover {
-  background-color: #b7adad;
+.rectangle-cards .see-more-btn:hover {
+  background-color: #dadada;
 }
