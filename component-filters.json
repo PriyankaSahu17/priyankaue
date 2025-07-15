@@ -16,6 +16,8 @@
       "cards",
       "columns",
       "fragment",
+      "rectangle-cards",
+      "vertical-cards",
       "banner-card"
     ]
   },
