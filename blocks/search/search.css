@@ -3,7 +3,6 @@
   position: relative;
   width: 100%;
   max-width: 140px; /* reduce width, adjust as needed */
-  justify-content: left;
 }
 
 .search .search-box .icon-search {
@@ -18,23 +17,22 @@
 }
 
 .search .search-box .icon-search img {
-  width: 160px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   display: block;
 }
 
 .search .search-box input {
   box-sizing: border-box;
   display: block;
-  height: 56px;
-  width:400px ;
+  width: 100%;
   margin: 0;
   padding: 0.4em 0.6em 0.4em 3em; /* smaller height and padding */
-  border-radius: 30px;
+  border-radius: 0px;
   border: 1px solid transparent; /* no visible border by default */
   background-color: #f0f0f0; /* grey background */
   color: #000;
-  font-size: 1.5rem; /* slightly smaller text */
+  font-size: 0.9rem; /* slightly smaller text */
   transition: border-color 0.2s, background-color 0.2s;
 }
 
