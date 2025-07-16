@@ -1,0 +1,142 @@
+/* -----------------------
+   Base Reset + Container
+------------------------ */
+.vertical-cards-container {
+  padding: 16px;
+
+}
+
+.vertical-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile first: 2 cards */
+  gap: 16px;
+}
+
+/* Tablet (≥900px): 3 cards */
+@media (min-width: 900px) {
+  .vertical-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (≥1200px): 5 cards */
+@media (min-width: 1200px) {
+  .vertical-cards-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* -----------------------
+   Individual Card Styling
+------------------------ */
+.vertical-cards-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Ensure image takes full width */
+.vertical-cards-wrapper > div > div:first-child picture,
+.vertical-cards-wrapper > div > div:first-child img {
+  width: 100%;
+  display: block;
+}
+
+
+/* Remove spacing in empty divs */
+.vertical-cards-wrapper > div > div:empty {
+  display: none;
+}
+/* Container styles */
+.vertical-cards-container {
+  padding: 16px;
+}
+
+/* Responsive grid for cards */
+.vertical-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile-first: 2 cards per row */
+  gap: 16px;
+}
+
+/* Tablet (min 900px): 3 cards */
+@media (min-width: 900px) {
+  .vertical-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (min 1200px): 5 cards */
+@media (min-width: 1200px) {
+  .vertical-cards-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Each card */
+.vertical-cards-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image should fill card */
+.vertical-cards-wrapper > div > div:first-child picture,
+.vertical-cards-wrapper > div > div:first-child img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Hide empty divs */
+.vertical-cards-wrapper > div > div:empty {
+  display: none;
+}
+/* CHIPS: horizontal scrolling */
+.vertical-cards-wrapper ul {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 12px;
+  margin: 0;
+  list-style: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vertical-cards-wrapper ul li {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  background-color: #efefef;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+.vertical-cards-wrapper ul li a {
+  color: #000 !important;    /* Force black */
+  text-decoration: none;     /* Remove underline */
+  font-weight: 600;          /* Ensure bold inside link */
+  font-size: 12px;           /* Match chip font size */
+  display: inline-block;     /* Optional for better padding control */
+}
+
+
+/* Optional: Scroll snap for nicer scroll */
+.vertical-cards-wrapper ul {
+  scroll-snap-type: x mandatory;
+}
+.vertical-cards-wrapper ul li {
+  scroll-snap-align: start;
+}
+.vertical-cards-wrapper ul::-webkit-scrollbar {
+  display: none; /* hide scrollbar for better look */
+}
+
+.vertical-cards-wrapper ul {
+  scrollbar-width: none; /* for Firefox */
+}

@@ -295,6 +295,32 @@
     ]
   },
   {
+      "id": "search",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "icon",
+          "label": "Icon",
+          "multi": false
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "link",
+          "label": "link",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "name": "placeholder",
+          "value": "Search Ideas",
+          "label": "Placeholder",
+          "valueType": "string"
+        }
+      ]
+    },
+  {
     "id": "rectangle-card",
     "fields": [
       {

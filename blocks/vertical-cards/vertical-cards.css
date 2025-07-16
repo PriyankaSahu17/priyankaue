@@ -1,0 +1,47 @@
+
+.vertical-cards {
+  columns: 5; /* Desktop */
+  column-gap: 16px;
+
+}
+
+.vertical-cards > div {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Style inner content */
+.vertical-cards picture,
+.vertical-cards img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .vertical-cards {
+    columns: 4;
+  }
+}
+@media (max-width: 900px) {
+  .vertical-cards {
+    columns: 3;
+  }
+}
+@media (max-width: 600px) {
+  .vertical-cards {
+    columns: 2;
+  }
+}
+@media (max-width: 400px) {
+  .vertical-cards {
+    columns: 1;
+  }
+}
