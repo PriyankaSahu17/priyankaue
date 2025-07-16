@@ -10,14 +10,8 @@ header .nav-wrapper {
 header nav {
   box-sizing: border-box;
   display: grid;
-  grid-template:
-    'brand sections tools auth' var(--nav-height) / auto auto auto auto;
   align-items: center;
-  gap: 0 24px;
-  margin: 0px;
-  max-width: 1248px;
   height: var(--nav-height);
-  padding: 0 12px;
   font-family: var(--body-font-family);
 }
 
@@ -25,8 +19,8 @@ header nav {
   header nav {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px;
-    padding: 0 32px;
+    /* gap: 0 32px;
+    padding: 0 32px; */
   }
 }
 
@@ -44,6 +38,7 @@ header nav .nav-brand img {
   width: 180px;
   height: auto;
   padding-left: 0;
+  /* padding-right:256px; */
 }
 
 /* sections */
@@ -71,5 +66,4 @@ header nav .nav-tools {
 /* auth */
 header nav .nav-auth1 {
   grid-area: auth;
-  display:none;
 }

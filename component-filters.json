@@ -19,6 +19,7 @@
       "fragment",
       "rectangle-cards",
       "vertical-cards",
+      "tile-cards",
       "banner-card"
     ]
   },
@@ -54,5 +55,13 @@
     "components": [
       "vertical-card"
     ]
+  },
+  {
+    "id": "tile-cards",
+    "components": [
+      "tile-card"
+    ]
   }
+  
+
 ]

@@ -2,7 +2,7 @@
 .search .search-box {
   position: relative;
   width: 100%;
-  max-width: 140px; /* reduce width, adjust as needed */
+  max-width: 400px; /* reduce width, adjust as needed */
 }
 
 .search .search-box .icon-search {
@@ -45,7 +45,7 @@
 /* search results */
 .search ul.search-results {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(600px, 2fr));
   gap: 24px;
   padding-left: 0;
   list-style: none;

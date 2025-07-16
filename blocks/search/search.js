@@ -20,6 +20,56 @@ function findNextHeading(el) {
   }
   return h;
 }
+async function handleSearchClick(block) {
+  const source = block.dataset.source || '/query-index.json';
+  const data = await fetchData(source);
+
+  if (!data || !Array.isArray(data)) return;
+
+  // Filter only /tiles/ entries with valid title and image
+  const tilesData = data.filter(item =>
+    item.path.startsWith('/tiles/') &&
+    item.title &&
+    item.image
+  );
+
+  // Create or select .tiles-results container
+  let tilesResults = block.querySelector('.tiles-results');
+  if (!tilesResults) {
+    tilesResults = document.createElement('ul');
+    tilesResults.className = 'tiles-results';
+    block.appendChild(tilesResults);
+  }
+  tilesResults.innerHTML = ''; // Clear old results
+
+  if (!tilesData.length) {
+    const noResults = document.createElement('li');
+    noResults.textContent = 'No tile entries found.';
+    tilesResults.append(noResults);
+    return;
+  }
+
+  tilesData.forEach(result => {
+    const li = document.createElement('li');
+
+    const a = document.createElement('a');
+    a.href = result.path;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'tile-result-image';
+
+    const pic = createOptimizedPicture(result.image, '', false, [{ width: '375' }]);
+    wrapper.append(pic);
+    a.append(wrapper);
+
+    const title = document.createElement('h3');
+    title.textContent = result.title;
+    a.append(title);
+
+    li.append(a);
+    tilesResults.append(li);
+  });
+}
 
 function highlightTextElements(terms, elements) {
   elements.forEach((element) => {
@@ -220,6 +270,9 @@ function searchInput(block) {
   input.className = 'search-input';
   input.placeholder = 'Search...';
   input.setAttribute('aria-label', 'Search...');
+  input.addEventListener('click', () => {
+    handleSearchClick(block); // Render tile results on click
+  });
 
   input.addEventListener('input', (e) => {
     handleSearch(e, block, { source: block.dataset.source });
