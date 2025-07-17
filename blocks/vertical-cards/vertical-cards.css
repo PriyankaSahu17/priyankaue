@@ -8,11 +8,10 @@
 .vertical-cards > div {
   break-inside: avoid;
   margin-bottom: 16px;
-  background: #fff;
+  background: transparent;
   border-radius: 10px;
   overflow: hidden;
-  padding: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
 }
 
 /* Optional: Style inner content */
@@ -40,8 +39,57 @@
     columns: 2;
   }
 }
-@media (max-width: 400px) {
-  .vertical-cards {
-    columns: 1;
-  }
+
+/* Make the ul scroll horizontally */
+.vertical-cards ul {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 8px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  scrollbar-width: none; /* Firefox */
 }
+
+.vertical-cards ul::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Style each li as a chip */
+.vertical-cards ul li {
+  flex: 0 0 auto;
+}
+
+.vertical-cards ul li a {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.vertical-cards ul li a:hover {
+  background-color: #e0e0e0;
+}
+.vertical-cards  p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  max-height: calc(1.4em * 2);
+  margin: 0;
+  font-size: 14px;
+}
+
+
+
+

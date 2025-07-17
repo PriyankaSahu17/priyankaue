@@ -1,0 +1,70 @@
+/* Make cards scrollable horizontally */
+.tile-cards-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  padding: 12px 0;
+}
+
+.tile-cards-wrapper {
+  padding-left: 1rem;
+}
+
+/* Horizontal scroll list */
+.tile-cards.block ul {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Card setup: image left, text right */
+.tile-cards.block ul li {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Fixed-size image */
+.tiles-card-image {
+  width: 64px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 6px 0 0 6px;
+  overflow: hidden;
+}
+
+.tiles-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text container adjusts automatically */
+.tiles-card-body {
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.tiles-card-body p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* Hide the scrollbar (for all browsers) */
+.tile-cards-container::-webkit-scrollbar {
+  display: none;
+}
+.tile-cards-container {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}

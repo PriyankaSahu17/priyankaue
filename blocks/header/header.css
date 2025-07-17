@@ -18,7 +18,7 @@ header nav {
 @media (width >= 900px) {
   header nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* gap: 0 32px;
     padding: 0 32px; */
   }
@@ -41,18 +41,10 @@ header nav .nav-brand img {
   /* padding-right:256px; */
 }
 
-/* sections */
-header nav .nav-sections {
-  grid-area: sections;
-  flex: 1 1 auto;
-  display: block;
-  visibility: visible;
-  white-space: nowrap;
-  padding-left: 140px;
-  display: none;
-}
+
 header nav .nav-tools{
   padding-left: 0;
+
 }
 
 
@@ -61,6 +53,7 @@ header nav .nav-tools{
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  width: 50%;
 }
 
 /* auth */

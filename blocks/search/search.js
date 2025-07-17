@@ -303,7 +303,8 @@ function searchBox(block) {
 export default async function decorate(block) {
   const source = block.querySelector('a[href]') ? block.querySelector('a[href]').href : '/query-index.json';
   block.dataset.source = source;
-  block.innerHTML = '';
+  while (block.firstChild) block.removeChild(block.firstChild);
+
   block.append(
     searchBox(block),
     searchResultsContainer(block),

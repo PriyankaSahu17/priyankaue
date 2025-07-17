@@ -259,6 +259,32 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "richtext",
+        "label": "Username",
+        "name": "username",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "label": "Password",
+        "name": "password",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "label": "Cta Link",
+        "name": "cta",
+        "value": "",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -294,51 +320,6 @@
       }
     ]
   },
-  {
-      "id": "search",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "icon",
-          "label": "Icon",
-          "multi": false
-        },
-        {
-          "component": "aem-content",
-          "valueType": "string",
-          "name": "link",
-          "label": "link",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "name": "placeholder",
-          "value": "Search Ideas",
-          "label": "Placeholder",
-          "valueType": "string"
-        }
-      ]
-    },
-    {
-      "id": "tile-card",
-      "fields": [
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
-          "valueType": "string"
-        }
-      ]
-    },
   {
     "id": "rectangle-card",
     "fields": [
