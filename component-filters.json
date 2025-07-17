@@ -41,6 +41,12 @@
     ]
   },
   {
+    "id": "favorites",
+    "components": [
+      "favorite"
+    ]
+  },
+  {
     "id": "rectangle-cards",
     "components": [
       "rectangle-card"
