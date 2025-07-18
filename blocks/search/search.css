@@ -2,7 +2,8 @@
 .search .search-box {
   position: relative;
   width: 100%;
-  max-width: 400px; /* reduce width, adjust as needed */
+  max-width: 800px;/* reduce width, adjust as needed */
+  margin-left: 32px;
 }
 
 .search .search-box .icon-search {
@@ -49,7 +50,7 @@
   gap: 24px;
   padding-left: 0;
   list-style: none;
-  max-width: 140px;
+  max-width: 400px;
 }
 
 .search ul.search-results > li {
@@ -94,7 +95,8 @@
 
 .search ul.search-results > li picture img {
   display: block;
-  width: 100%;
+  width:48px;
+  height: 48px;
   object-fit: cover;
 }
 
