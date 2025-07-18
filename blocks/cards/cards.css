@@ -80,3 +80,16 @@
 .see-more-btn:hover {
   background-color: #b7adad;
 }
+/* First line — regular */
+.cards .cards-card-body .card-line1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Second line — bold and bigger */
+.cards .cards-card-body .card-line2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 4px;
+}

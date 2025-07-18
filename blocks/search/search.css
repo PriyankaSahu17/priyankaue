@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   max-width: 800px;/* reduce width, adjust as needed */
-  margin-left: 32px;
+  margin-left: 0px;
 }
 
 .search .search-box .icon-search {
@@ -18,8 +18,8 @@
 }
 
 .search .search-box .icon-search img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: block;
 }
 
@@ -29,12 +29,13 @@
   width: 100%;
   margin: 0;
   padding: 0.4em 0.6em 0.4em 3em; /* smaller height and padding */
-  border-radius: 0px;
+  border-radius: 20px;
   border: 1px solid transparent; /* no visible border by default */
   background-color: #f0f0f0; /* grey background */
   color: #000;
   font-size: 0.9rem; /* slightly smaller text */
   transition: border-color 0.2s, background-color 0.2s;
+  height:42px;
 }
 
 .search .search-box input:hover,
@@ -156,3 +157,133 @@
   width: 24px;
   border-radius: 50%;
 }
+/* Container: horizontally scrollable cards inside .search */
+.search ul.tiles-results {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  list-style: none;
+  padding: 12px 1rem;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+/* Hide scrollbar */
+.search ul.tiles-results::-webkit-scrollbar {
+  display: none;
+}
+.search ul.tiles-results {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Each tile (card) */
+.search ul.tiles-results li {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  scroll-snap-align: start;
+  min-width: 250px;
+}
+
+/* Image container */
+.search ul.tiles-results .tile-result-image {
+  width: 64px;
+  height: 48px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+}
+
+.search ul.tiles-results .tile-result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text next to image */
+.search ul.tiles-results h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  padding: 8px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #f5f5f5;   /* Light grey background */
+  border-radius: 0 8px 8px 0;   /* Rounded corners on right */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search ul.tiles-results li a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.search ul.tiles-results {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 12px;
+  margin-top: 12px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  scrollbar-width: none; /* Firefox */
+}
+
+.search ul.tiles-results::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Each card item */
+.search ul.tiles-results li {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: transparent; /* no background on full card */
+}
+
+/* Image wrapper */
+.search ul.tiles-results .tile-result-image {
+  width: 64px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 6px 0 0 6px;
+  overflow: hidden;
+}
+
+.search ul.tiles-results .tile-result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Grey text background only behind text */
+.search ul.tiles-results h3 {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: #f2f2f2;
+  border-radius: 0 8px 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

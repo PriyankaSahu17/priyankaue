@@ -317,4 +317,27 @@ export default async function decorate(block) {
   }
 
   decorateIcons(block);
+  document.addEventListener('click', (e) => {
+    const tilesResults = block.querySelector('.tiles-results');
+    const searchInput = block.querySelector('.search-input');
+    if (!block.contains(e.target)) {
+      if (tilesResults) tilesResults.innerHTML = '';
+    }
+  });
+  document.addEventListener('click', function (e) {
+  const tilesBox = document.querySelector('.search .tiles-results');
+  const searchContainer = document.querySelector('.search');
+
+  if (!tilesBox || !searchContainer) return;
+
+  // If the click is outside the search container, hide the tiles
+  if (!searchContainer.contains(e.target)) {
+    tilesBox.style.display = 'none';
+  }
+});
+document.querySelector('.search-input')?.addEventListener('focus', () => {
+  const tilesBox = document.querySelector('.search .tiles-results');
+  if (tilesBox) tilesBox.style.display = 'block';
+});
+
 }
